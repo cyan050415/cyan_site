@@ -1,0 +1,246 @@
+/* =========================
+   基本設定
+========================= */
+body {
+  background: #f6fbff;            /* 明るい白＋水色 */
+  font-family: "Noto Sans JP", sans-serif;
+  color: #2f3a45;
+  margin: 0;
+  line-height: 1.8;
+}
+
+/* =========================
+   ヘッダー
+========================= */
+header {
+  background: #ffffff;
+  padding: 26px 20px;
+  text-align: center;
+  border-bottom: 1px solid #dceaf5;
+}
+
+header h1 {
+  margin: 0;
+  font-family: "Noto Serif JP", serif;
+  font-size: 1.9em;
+  color: #2a5d8f;
+  letter-spacing: 0.05em;
+}
+
+/* =========================
+   ナビゲーション
+========================= */
+nav {
+  margin-top: 12px;
+}
+
+nav a {
+  margin: 0 14px;
+  text-decoration: none;
+  font-size: 0.95em;
+  color: #4f8fc9;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #2a5d8f;
+  text-decoration: underline;
+}
+
+/* =========================
+   メインコンテンツ
+========================= */
+main {
+  max-width: 900px;
+  margin: 42px auto;
+  background: #ffffff;
+  padding: 34px;
+  border-radius: 20px;
+  box-shadow: 0 14px 34px rgba(80,130,180,0.12);
+}
+
+/* =========================
+   見出し
+========================= */
+h2 {
+  font-family: "Noto Serif JP", serif;
+  color: #2a5d8f;
+  border-left: 5px solid #9fd4ff;
+  padding-left: 14px;
+  margin-top: 48px;
+  margin-bottom: 18px;
+  letter-spacing: 0.04em;
+}
+
+/* =========================
+   カード（立ち絵・一枚絵・動画）
+========================= */
+.card {
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 18px;
+  margin-bottom: 26px;
+  border: 1px solid #dceaf5;
+  box-shadow: 0 8px 24px rgba(0, 120, 200, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  /* 中央寄せ（執事案の要） */
+  text-align: center;
+}
+
+/* ホバー時にふわっと浮く */
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 120, 200, 0.15);
+}
+
+/* =========================
+   カード内画像
+========================= */
+.card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 14px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* =========================
+   イラスト名
+========================= */
+.card h3 {
+  font-size: 1.1em;
+  color: #1f3a5f;
+  margin-top: 14px;
+  margin-bottom: 6px;
+  letter-spacing: 0.03em;
+}
+
+/* =========================
+   備考・説明文
+========================= */
+.card p {
+  font-size: 0.9em;
+  color: #4a6fa5;
+
+  /* 読みやすさ重視でここだけ左寄せ */
+  text-align: left;
+
+  max-width: 420px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* =========================
+   テキスト共通
+========================= */
+strong {
+  font-weight: 600;
+  color: #2f3a45;
+}
+
+p {
+  margin: 0.6em 0;
+}
+
+/* =========================
+   リンク
+========================= */
+a {
+  color: #4f8fc9;
+}
+
+a:hover {
+  color: #2a5d8f;
+}
+
+/* =========================
+   フッター
+========================= */
+footer {
+  text-align: center;
+  font-size: 0.85em;
+  color: #7a8a99;
+  margin: 46px 0 24px;
+}
+
+/* =========================
+   キリ番表示（ちょっと可愛く）
+========================= */
+#kiriban {
+  font-weight: 600;
+  color: #4f8fc9;
+}
+
+/* =========================
+   ヒーロー（壁紙エリア）
+========================= */
+.hero {
+  width: 100%;
+  height: 320px;
+  background-image: url("images/banner/home_bg.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 0 0 28px 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 文字を載せる場合 */
+.hero-text {
+  background: rgba(255, 255, 255, 0.65);
+  padding: 18px 28px;
+  border-radius: 20px;
+  text-align: center;
+  backdrop-filter: blur(4px);
+}
+
+.hero-text h2 {
+  margin: 0;
+  font-family: "Noto Serif JP", serif;
+  color: #2a5d8f;
+}
+
+.hero-text p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #4f8fc9;
+}
+
+/* =========================
+   カード内文字を中央寄せ
+========================= */
+.card h3,
+.card p {
+  text-align: center;
+}
+
+
+/* =========================
+   歌カード内文字を左寄せ
+========================= */
+
+.songs {
+  list-style: none;
+  padding-left: 0;
+  text-align: left;
+}
+
+.songs li {
+  margin-bottom: 4px;
+}
+
+/* =========================
+   歌える歌リスト用
+========================= */
+.songs {
+  list-style: none;
+  padding-left: 0;
+  text-align: left;
+}
+
+.songs li {
+  margin-bottom: 24px; /* ←ここを調整 */
+}

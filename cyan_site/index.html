@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>藍晶シアン Official Site</title>
+
+<!-- フォント（Google Fonts） -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600&display=swap" rel="stylesheet">
+
+<!-- 共通CSS -->
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <h1>藍晶シアン Official Site</h1>
+</header>
+
+<!-- =========================
+     壁紙（ヒーローエリア）
+========================= -->
+<section class="hero"></section>
+
+<main>
+
+  <!-- =========================
+       コンテンツ案内
+  ========================= -->
+  <h2>コンテンツ</h2>
+
+  <div class="card">
+    <a href="stand.html">
+      <h3>立ち絵</h3>
+      <p>キャラクターの立ち絵一覧はこちら</p>
+    </a>
+  </div>
+
+  <div class="card">
+    <a href="illust.html">
+      <h3>一枚絵</h3>
+      <p>記念イラスト・ファンアートまとめ</p>
+    </a>
+  </div>
+
+  <div class="card">
+    <a href="movie.html">
+      <h3>動画</h3>
+      <p>歌・ショート・動画作品</p>
+    </a>
+  </div>
+
+<div class="card">
+  <a href="song.html">
+    <h3>歌える歌リスト</h3>
+    <p>配信で歌える楽曲一覧</p>
+  </a>
+</div>
+
+
+
+  <!-- =========================
+       配信案内
+  ========================= -->
+  <h2>配信はこちら</h2>
+
+  <div class="card">
+    <p>
+      🎥 <a href="https://youtube.com/@cyan.r05?si=3pZg6EMU8YNFv-Sa" target="_blank">YouTube</a><br>
+      🎮 <a href="https://web.iriam.app/s/user/XLelM72wtL?uuid=ee2e2f39" target="_blank">IRIAM</a><br>
+      🐦 <a href="https://x.com/Cyan_Ransho2nd" target="_blank">X</a>
+    </p>
+  </div>
+
+</main>
+
+<footer>
+  <p>© 藍晶シアン</p>
+
+  <p>
+    ↓↓ キリ番 ＊ 踏んだ人はスクショをDMへ<br>
+    ボイスリクエスト権を進呈します
+  </p>
+
+  <p>
+    あなたは <span id="kiriban">0</span> 人目の訪問者です
+  </p>
+</footer>
+
+<!-- =========================
+     キリ番カウント
+========================= -->
+<script>
+  let count = localStorage.getItem("kiriban");
+
+  if (!count) {
+    count = 0;
+  }
+
+  count++;
+  localStorage.setItem("kiriban", count);
+
+  document.getElementById("kiriban").textContent = count;
+</script>
+
+</body>
+</html>
