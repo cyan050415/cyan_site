@@ -2,19 +2,111 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>藍晶シアン Official Site</title>
+<title>藍晶シアン Official Site｜イラスト</title>
 
-<!-- フォント（Google Fonts） -->
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 
-<!-- 共通CSS -->
-<link rel="stylesheet" href="style.css">
+<style>
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background: #f9fbfd;
+  margin: 0;
+}
+
+header {
+  background: #2a5d8f;
+  color: #fff;
+  padding: 16px;
+  text-align: center;
+}
+
+header nav a {
+  color: #fff;
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.tab {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.tab button {
+  padding: 10px 20px;
+  border: 1px solid #2a5d8f;
+  border-radius: 12px;
+  background: #fff;
+  color: #2a5d8f;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.tab button.active,
+.tab button:hover {
+  background: #2a5d8f;
+  color: #fff;
+}
+
+.tabcontent {
+  display: none;
+}
+
+.tabcontent.active {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+.card {
+  background: #f2f9ff;
+  border: 1px solid #dceaf5;
+  border-radius: 18px;
+  width: 320px;
+  padding: 16px;
+  text-align: center;
+}
+
+.illust-box {
+  height: 220px;
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 画像 */
+.illust-box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+/* 動画 */
+.illust-box video {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 12px;
+}
+
+.info {
+  font-size: 14px;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <h1>一枚絵</h1>
+  <h1>藍晶シアン｜イラスト</h1>
   <nav>
     <a href="index.html">HOME</a>
     <a href="stand.html">立ち絵</a>
@@ -22,10 +114,73 @@
   </nav>
 </header>
 
-<main>
+<div class="tab">
+  <button class="tablinks active" onclick="openTab(event,'main')">一枚絵</button>
+  <button class="tablinks" onclick="openTab(event,'mini')">ミニキャラ</button>
+  <button class="tablinks" onclick="openTab(event,'other')">その他</button>
+</div>
 
-  <h2>🖼️ イラスト一覧</h2>
+<!-- 一枚絵 -->
+<div id="main" class="tabcontent active">
+  <div class="card" data-date="2024-11-01">
+    <div class="illust-box">
+      <img src="images/illust/main/一枚絵01.png" alt="等身イラスト">
+    </div>
+    <strong>等身イラスト</strong>
+    <div class="info">
+      🎨 イラスト：Alo Illlustrato様<br>
+      🔗 X：@Alo_illust<br>
+      🛒 依頼：Skeb<br>
+      📅 2025年
+    </div>
+  </div>
+</div>
 
-  <!-- 1枚目 -->
-  <div class="card">
-    <img src="images/illust/sample01.jpg" width="300"><b
+<!-- ミニキャラ -->
+<div id="mini" class="tabcontent">
+  <div class="card" data-date="2025-09-13">
+    <div class="illust-box">
+      <img src="images/illust/mini/ミニキャラ01.png" alt="ミニキャラ">
+    </div>
+    <strong>ミニキャラ</strong>
+    <div class="info">
+      🎨 イラスト：Ms.シトロン🍋🦭様<br>
+      🔗 X：@Mscitronsama<br>
+      🛒 依頼：IRIAM<br>
+      📅 2025年
+    </div>
+  </div>
+</div>
+
+<!-- その他（動画対応） -->
+<div id="other" class="tabcontent">
+  <div class="card" data-date="2025-11-14">
+    <div class="illust-box">
+      <video src="images/illust/other/その他01.mp4"
+             controls
+             muted
+             loop
+             playsinline>
+      </video>
+    </div>
+    <strong>待機画面アニメーション</strong>
+    <div class="info">
+      🎨 イラスト：めの壱様<br>
+      🔗 X：@Okasi_na_Meno_1<br>
+      🛒 依頼：Skeb<br>
+      📅 2025年
+    </div>
+  </div>
+</div>
+
+<script>
+function openTab(evt, tabName) {
+  document.querySelectorAll('.tabcontent').forEach(tc => tc.classList.remove('active'));
+  document.querySelectorAll('.tablinks').forEach(tl => tl.classList.remove('active'));
+  document.getElementById(tabName).classList.add('active');
+  evt.currentTarget.classList.add('active');
+}
+</script>
+
+</body>
+</html>
